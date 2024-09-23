@@ -1,4 +1,4 @@
-# Kubernetes CronJobs with Spring Boot
+#  Spring CronJobs with Kubernetes
 
 ## Overview
 
