@@ -64,14 +64,23 @@ kubectl get cronjobs
 
 ```
 
-#### 9: Open the Kubernetes Dashboard
+#### 9: Start the Kubernetes Dashboard
 ```bash
 minikube dashboard
 
 ```
 
+#### 10: Open the Kubernetes Dashboard
+```bash
+http://127.0.0.1:58635/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/
+
+```
+
+![Kubernetes-Dashboard](https://github.com/yusuf-aziz/spring-kubernetes-cronjobs/blob/main/Kubernetes_Dashboard.png?raw=true)
 
 
+![Kubernetes-Cronjobs](https://github.com/yusuf-aziz/spring-kubernetes-cronjobs/blob/main/Kubernetes_Cronjobs.png?raw=true)
 
 
+![Kubernetes-Cronjobs-Logs](https://github.com/yusuf-aziz/spring-kubernetes-cronjobs/blob/main/Kubernetes_Cronjobs_logs.png?raw=true)
 
