@@ -1,4 +1,4 @@
-#  Spring CronJobs with Kubernetes
+#  Simplifying Spring CronJobs with Kubernetes
 
 ## Overview
 
@@ -19,15 +19,15 @@ This project demonstrates how to deploy scheduled tasks in a Kubernetes environm
 
 #### 1: Clone the Repository
 ```bash
-git clone https://github.com/yusuf-aziz/observability-with-micrometer-and-zipkin.git
+git clone git clone https://github.com/yusuf-aziz/spring-kubernetes-cronjobs.git
 ```
 
-#### 2: Navigate to the cloned repository:
+#### 2: Navigate to the cloned repository
 ```bash
-cd observability-with-micrometer-and-zipkin
+cd spring-kubernetes-cronjobs
 ```
 
-#### 3: Run mvn clean install:
+#### 3: Run mvn clean install
 ```bash
 mvn clean install
 ```
