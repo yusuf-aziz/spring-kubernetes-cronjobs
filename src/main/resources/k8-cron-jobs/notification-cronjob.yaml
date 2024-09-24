@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: notification-job
+spec:
+  schedule: "*/5 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: job-scheduler
+            image: job-scheduler:latest
+            imagePullPolicy: IfNotPresent
+            args:
+            - "--job.name=notificationScheduler"
+            env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "dev"
+            resources:
+              requests:
+                memory: "500Mi"
+                cpu: "250m"
+              limits:
+                memory: "1Gi"
+                cpu: "500m"
+          restartPolicy: Never
+          
+           
