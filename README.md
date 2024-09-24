@@ -12,8 +12,8 @@ In a Spring Boot app, @Scheduled is great for running tasks at fixed intervals. 
 Using Kubernetes CronJobs and Spring Boot Project, we are able to control all our scheduling in an efficient way. Just pass command-line arguments for indicating which job is supposed to run, and we are good to go! Kubernetes will manage these jobs outside of our app pods, avoiding duplication issues and keeping everything running smoothly.
 
 This project demonstrates how to deploy scheduled tasks in a Kubernetes environment using CronJobs. We are using two scheduled jobs:
-1. **Payment Job**: Runs every 5 minutes.
-2. **Report Job**: Runs every 10 minutes.
+1. **Notification Job**: Runs every 5 minutes.
+2. **DataSync Job**: Runs every 10 minutes.
 
 ## Try It Out
 
@@ -53,9 +53,9 @@ docker build -t job-scheduler:latest .
 ```bash
 cd src/main/resources/k8-cron-jobs
 
-kubectl apply -f payment-cronjob.yaml
+kubectl apply -f data-sync-cronjob.yaml
 
-kubectl apply -f report-cronjob.yaml
+kubectl apply -f notification-cronjob.yaml
 ```
 
 #### 8: Verify that the CronJobs have been created
@@ -83,4 +83,3 @@ http://127.0.0.1:58635/api/v1/namespaces/kubernetes-dashboard/services/http:kube
 
 
 ![Kubernetes-Cronjobs-Logs](https://github.com/yusuf-aziz/spring-kubernetes-cronjobs/blob/main/Kubernetes_Cronjobs_logs.png?raw=true)
-
